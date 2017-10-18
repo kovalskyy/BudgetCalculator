@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1611" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ADD BUDGET-->
+        <scene sceneID="1Cy-pZ-7ZC">
+            <objects>
+                <viewController storyboardIdentifier="AddBudgetScene" id="lJI-XT-aeR" customClass="AddBudgetViewController" customModule="BudgetList" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="g98-qN-La1"/>
+                        <viewControllerLayoutGuide type="bottom" id="nQa-L7-eEt"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4dU-rd-AkK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="AMOUNT" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="D6M-o9-3jM">
+                                <rect key="frame" x="16" y="163" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="NAME" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0B7-Tp-6aS">
+                                <rect key="frame" x="16" y="89" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KO9-wG-7Bf">
+                                <rect key="frame" x="16" y="318" width="343" height="30"/>
+                                <color key="backgroundColor" red="0.34152487529999997" green="0.76095872350000004" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="SAVE">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveContent:" destination="lJI-XT-aeR" eventType="touchUpInside" id="2HP-Ki-2rG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D6M-o9-3jM" firstAttribute="trailing" secondItem="KO9-wG-7Bf" secondAttribute="trailing" id="CkU-rw-eGh"/>
+                            <constraint firstItem="D6M-o9-3jM" firstAttribute="top" secondItem="0B7-Tp-6aS" secondAttribute="bottom" constant="44" id="EeU-R9-4WJ"/>
+                            <constraint firstItem="D6M-o9-3jM" firstAttribute="leading" secondItem="KO9-wG-7Bf" secondAttribute="leading" id="NJp-OF-GlV"/>
+                            <constraint firstItem="0B7-Tp-6aS" firstAttribute="leading" secondItem="D6M-o9-3jM" secondAttribute="leading" id="QNc-9z-HO3"/>
+                            <constraint firstItem="0B7-Tp-6aS" firstAttribute="top" secondItem="g98-qN-La1" secondAttribute="bottom" constant="69" id="Zf6-yT-qKs"/>
+                            <constraint firstItem="0B7-Tp-6aS" firstAttribute="leading" secondItem="4dU-rd-AkK" secondAttribute="leadingMargin" id="cvU-kz-Mjk"/>
+                            <constraint firstItem="KO9-wG-7Bf" firstAttribute="centerY" secondItem="4dU-rd-AkK" secondAttribute="centerY" id="gHY-hC-e4c"/>
+                            <constraint firstItem="0B7-Tp-6aS" firstAttribute="trailing" secondItem="4dU-rd-AkK" secondAttribute="trailingMargin" id="jtM-Ah-edz"/>
+                            <constraint firstItem="0B7-Tp-6aS" firstAttribute="trailing" secondItem="D6M-o9-3jM" secondAttribute="trailing" id="l42-bb-diX"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="ADD BUDGET" id="ifD-QB-tSh"/>
+                    <connections>
+                        <outlet property="budgetAmount" destination="D6M-o9-3jM" id="9vy-p7-Vjh"/>
+                        <outlet property="budgetName" destination="0B7-Tp-6aS" id="LoF-4V-bb8"/>
+                        <outlet property="saveButton" destination="KO9-wG-7Bf" id="LIa-eS-P8c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ejx-5D-I8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-846" y="262"/>
+        </scene>
+    </scenes>
+</document>

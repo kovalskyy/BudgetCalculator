@@ -8,22 +8,26 @@
 
 /* Begin PBXBuildFile section */
 		235F3B961F9788DD00133D0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3B951F9788DD00133D0A /* AppDelegate.swift */; };
-		235F3B981F9788DD00133D0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3B971F9788DD00133D0A /* ViewController.swift */; };
-		235F3B9B1F9788DD00133D0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235F3B991F9788DD00133D0A /* Main.storyboard */; };
 		235F3B9E1F9788DD00133D0A /* BudgetCalculator.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 235F3B9C1F9788DD00133D0A /* BudgetCalculator.xcdatamodeld */; };
 		235F3BA01F9788DD00133D0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 235F3B9F1F9788DD00133D0A /* Assets.xcassets */; };
 		235F3BA31F9788DD00133D0A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235F3BA11F9788DD00133D0A /* LaunchScreen.storyboard */; };
+		235F3BB41F978BF200133D0A /* AddBudget.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235F3BB01F978BF200133D0A /* AddBudget.storyboard */; };
+		235F3BB51F978BF200133D0A /* AddExpense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235F3BB11F978BF200133D0A /* AddExpense.storyboard */; };
+		235F3BB61F978BF200133D0A /* BudgetDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235F3BB21F978BF200133D0A /* BudgetDetail.storyboard */; };
+		235F3BB71F978BF200133D0A /* BudgetList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235F3BB31F978BF200133D0A /* BudgetList.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		235F3B921F9788DD00133D0A /* BudgetCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BudgetCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		235F3B951F9788DD00133D0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		235F3B971F9788DD00133D0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		235F3B9A1F9788DD00133D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		235F3B9D1F9788DD00133D0A /* BudgetCalculator.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BudgetCalculator.xcdatamodel; sourceTree = "<group>"; };
 		235F3B9F1F9788DD00133D0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		235F3BA21F9788DD00133D0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		235F3BA41F9788DD00133D0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		235F3BB01F978BF200133D0A /* AddBudget.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddBudget.storyboard; sourceTree = "<group>"; };
+		235F3BB11F978BF200133D0A /* AddExpense.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddExpense.storyboard; sourceTree = "<group>"; };
+		235F3BB21F978BF200133D0A /* BudgetDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BudgetDetail.storyboard; sourceTree = "<group>"; };
+		235F3BB31F978BF200133D0A /* BudgetList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BudgetList.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +60,65 @@
 		235F3B941F9788DD00133D0A /* BudgetCalculator */ = {
 			isa = PBXGroup;
 			children = (
+				235F3BAA1F978AD300133D0A /* Model */,
+				235F3BAB1F978AD800133D0A /* View */,
+				235F3BAC1F978ADB00133D0A /* Controller */,
+				235F3BAD1F978AE200133D0A /* Resources */,
+			);
+			path = BudgetCalculator;
+			sourceTree = "<group>";
+		};
+		235F3BAA1F978AD300133D0A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		235F3BAB1F978AD800133D0A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				235F3BAE1F978B1200133D0A /* Cells */,
+				235F3BAF1F978B1D00133D0A /* Storyboards */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		235F3BAC1F978ADB00133D0A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		235F3BAD1F978AE200133D0A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
 				235F3B951F9788DD00133D0A /* AppDelegate.swift */,
-				235F3B971F9788DD00133D0A /* ViewController.swift */,
-				235F3B991F9788DD00133D0A /* Main.storyboard */,
 				235F3B9F1F9788DD00133D0A /* Assets.xcassets */,
 				235F3BA11F9788DD00133D0A /* LaunchScreen.storyboard */,
 				235F3BA41F9788DD00133D0A /* Info.plist */,
 				235F3B9C1F9788DD00133D0A /* BudgetCalculator.xcdatamodeld */,
 			);
-			path = BudgetCalculator;
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		235F3BAE1F978B1200133D0A /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		235F3BAF1F978B1D00133D0A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				235F3BB31F978BF200133D0A /* BudgetList.storyboard */,
+				235F3BB01F978BF200133D0A /* AddBudget.storyboard */,
+				235F3BB21F978BF200133D0A /* BudgetDetail.storyboard */,
+				235F3BB11F978BF200133D0A /* AddExpense.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -127,9 +181,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235F3BB51F978BF200133D0A /* AddExpense.storyboard in Resources */,
 				235F3BA31F9788DD00133D0A /* LaunchScreen.storyboard in Resources */,
 				235F3BA01F9788DD00133D0A /* Assets.xcassets in Resources */,
-				235F3B9B1F9788DD00133D0A /* Main.storyboard in Resources */,
+				235F3BB71F978BF200133D0A /* BudgetList.storyboard in Resources */,
+				235F3BB61F978BF200133D0A /* BudgetDetail.storyboard in Resources */,
+				235F3BB41F978BF200133D0A /* AddBudget.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -140,7 +197,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				235F3B981F9788DD00133D0A /* ViewController.swift in Sources */,
 				235F3B961F9788DD00133D0A /* AppDelegate.swift in Sources */,
 				235F3B9E1F9788DD00133D0A /* BudgetCalculator.xcdatamodeld in Sources */,
 			);
@@ -149,14 +205,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		235F3B991F9788DD00133D0A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				235F3B9A1F9788DD00133D0A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		235F3BA11F9788DD00133D0A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -306,6 +354,7 @@
 				235F3BA91F9788DD00133D0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
