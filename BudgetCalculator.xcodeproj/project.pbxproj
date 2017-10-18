@@ -15,6 +15,15 @@
 		235F3BB51F978BF200133D0A /* AddExpense.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235F3BB11F978BF200133D0A /* AddExpense.storyboard */; };
 		235F3BB61F978BF200133D0A /* BudgetDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235F3BB21F978BF200133D0A /* BudgetDetail.storyboard */; };
 		235F3BB71F978BF200133D0A /* BudgetList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 235F3BB31F978BF200133D0A /* BudgetList.storyboard */; };
+		235F3BB91F978D9400133D0A /* BudgetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3BB81F978D9400133D0A /* BudgetListViewController.swift */; };
+		235F3BBB1F978DB600133D0A /* BudgetDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3BBA1F978DB600133D0A /* BudgetDetailsViewController.swift */; };
+		235F3BBD1F978DD000133D0A /* AddBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3BBC1F978DD000133D0A /* AddBudgetViewController.swift */; };
+		235F3BBF1F978DE700133D0A /* AddExpenseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3BBE1F978DE700133D0A /* AddExpenseViewController.swift */; };
+		235F3BC11F978E3900133D0A /* BudgetCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3BC01F978E3900133D0A /* BudgetCell.swift */; };
+		235F3BC31F978E4800133D0A /* ExpenseCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3BC21F978E4800133D0A /* ExpenseCell.swift */; };
+		235F3BC51F978E5A00133D0A /* BalanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3BC41F978E5A00133D0A /* BalanceCell.swift */; };
+		235F3BC71F978E8700133D0A /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3BC61F978E8700133D0A /* Budget.swift */; };
+		235F3BC91F978E9100133D0A /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 235F3BC81F978E9100133D0A /* Expense.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +37,15 @@
 		235F3BB11F978BF200133D0A /* AddExpense.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = AddExpense.storyboard; sourceTree = "<group>"; };
 		235F3BB21F978BF200133D0A /* BudgetDetail.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BudgetDetail.storyboard; sourceTree = "<group>"; };
 		235F3BB31F978BF200133D0A /* BudgetList.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = BudgetList.storyboard; sourceTree = "<group>"; };
+		235F3BB81F978D9400133D0A /* BudgetListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetListViewController.swift; sourceTree = "<group>"; };
+		235F3BBA1F978DB600133D0A /* BudgetDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetDetailsViewController.swift; sourceTree = "<group>"; };
+		235F3BBC1F978DD000133D0A /* AddBudgetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddBudgetViewController.swift; sourceTree = "<group>"; };
+		235F3BBE1F978DE700133D0A /* AddExpenseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddExpenseViewController.swift; sourceTree = "<group>"; };
+		235F3BC01F978E3900133D0A /* BudgetCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BudgetCell.swift; sourceTree = "<group>"; };
+		235F3BC21F978E4800133D0A /* ExpenseCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseCell.swift; sourceTree = "<group>"; };
+		235F3BC41F978E5A00133D0A /* BalanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BalanceCell.swift; sourceTree = "<group>"; };
+		235F3BC61F978E8700133D0A /* Budget.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		235F3BC81F978E9100133D0A /* Expense.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +89,8 @@
 		235F3BAA1F978AD300133D0A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				235F3BC61F978E8700133D0A /* Budget.swift */,
+				235F3BC81F978E9100133D0A /* Expense.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -87,6 +107,10 @@
 		235F3BAC1F978ADB00133D0A /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				235F3BB81F978D9400133D0A /* BudgetListViewController.swift */,
+				235F3BBA1F978DB600133D0A /* BudgetDetailsViewController.swift */,
+				235F3BBC1F978DD000133D0A /* AddBudgetViewController.swift */,
+				235F3BBE1F978DE700133D0A /* AddExpenseViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -106,6 +130,9 @@
 		235F3BAE1F978B1200133D0A /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				235F3BC01F978E3900133D0A /* BudgetCell.swift */,
+				235F3BC21F978E4800133D0A /* ExpenseCell.swift */,
+				235F3BC41F978E5A00133D0A /* BalanceCell.swift */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -197,8 +224,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				235F3BC91F978E9100133D0A /* Expense.swift in Sources */,
+				235F3BBB1F978DB600133D0A /* BudgetDetailsViewController.swift in Sources */,
+				235F3BBF1F978DE700133D0A /* AddExpenseViewController.swift in Sources */,
+				235F3BC71F978E8700133D0A /* Budget.swift in Sources */,
+				235F3BB91F978D9400133D0A /* BudgetListViewController.swift in Sources */,
 				235F3B961F9788DD00133D0A /* AppDelegate.swift in Sources */,
+				235F3BC51F978E5A00133D0A /* BalanceCell.swift in Sources */,
+				235F3BC31F978E4800133D0A /* ExpenseCell.swift in Sources */,
+				235F3BC11F978E3900133D0A /* BudgetCell.swift in Sources */,
 				235F3B9E1F9788DD00133D0A /* BudgetCalculator.xcdatamodeld in Sources */,
+				235F3BBD1F978DD000133D0A /* AddBudgetViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

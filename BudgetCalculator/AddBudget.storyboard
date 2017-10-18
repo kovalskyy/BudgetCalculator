@@ -13,7 +13,7 @@
         <!--ADD BUDGET-->
         <scene sceneID="1Cy-pZ-7ZC">
             <objects>
-                <viewController storyboardIdentifier="AddBudgetScene" id="lJI-XT-aeR" customClass="AddBudgetViewController" customModule="BudgetList" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AddBudgetScene" id="lJI-XT-aeR" customClass="AddBudgetViewController" customModule="BudgetCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="g98-qN-La1"/>
                         <viewControllerLayoutGuide type="bottom" id="nQa-L7-eEt"/>
@@ -67,7 +67,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ejx-5D-I8e" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-846" y="262"/>
+            <point key="canvasLocation" x="-922" y="269"/>
         </scene>
     </scenes>
 </document>
