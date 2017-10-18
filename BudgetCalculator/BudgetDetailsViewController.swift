@@ -8,88 +8,75 @@
 
 import UIKit
 
-class BudgetDetailsViewController: UITableViewController {
+protocol BudgetDetailsViewDelegate: class {
+    func budgetDetailsViewDidUpdateBudget(budget: Budget)
+}
 
+class BudgetDetailsViewController: UITableViewController, ExpenseDelegate {
+    
+    var budget: Budget!
+    weak var delegate: BudgetDetailsViewDelegate?
+    let minimalAmount = 0
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
+        
+        navigationItem.setTitle(title: budget.name.capitalized, subtitle: ("$" + String(budget.total)))
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style:.plain, target:nil, action:nil)
     }
-
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
-    }
-
-    /*
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
-        return cell
-    }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
-    }
-    */
-
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
-    }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
+    //MARK: - Navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+        if let destinationViewController = segue.destination as? AddExpenseViewController {
+            destinationViewController.delegate = self
+        }
     }
-    */
-
+    
+    // MARK: - Table view data source
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return budget.expenses.count + 1
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if indexPath.row < budget.expenses.count {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ExpenseCell") as! ExpenseCell
+            cell.expense = budget.expenses[indexPath.row]
+            return cell
+        } else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BalanceCell") as! BalanceCell
+            cell.textLabel?.text = "Wallet Balance: \(budget.balance.formatedCurrency)"
+            return cell
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        guard let cell = cell as? BalanceCell else { return }
+        
+        if budget.balance > minimalAmount {
+            cell.textLabel?.backgroundColor = UIColor.blue
+            cell.contentView.backgroundColor = UIColor.blue
+        } else {
+            cell.textLabel?.backgroundColor = UIColor.red
+            cell.contentView.backgroundColor = UIColor.red
+        }
+    }
+    
+    //MARK: - Callback
+    
+    func enteredExpenseData(name: String, amount: Int) {
+        budget.expenses.append(Expense(name: name, amount: amount))
+        tableView.reloadData()
+        delegate?.budgetDetailsViewDidUpdateBudget(budget: budget)
+    }
 }

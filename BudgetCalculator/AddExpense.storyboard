@@ -44,7 +44,7 @@
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="saveExpenseContent:" destination="voQ-jJ-tPL" eventType="touchUpInside" id="Rdf-hl-ZPl"/>
+                                    <action selector="saveExpenseContent:" destination="voQ-jJ-tPL" eventType="touchUpInside" id="fX1-a0-8Zl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -63,14 +63,14 @@
                     </view>
                     <navigationItem key="navigationItem" title="Add an expense" id="m4A-FN-Jdg"/>
                     <connections>
-                        <outlet property="expenseAmount" destination="qt9-g5-vq3" id="Wlk-O7-hnQ"/>
-                        <outlet property="expenseName" destination="Kww-tL-cAv" id="sRG-Bg-pvI"/>
-                        <outlet property="saveButton" destination="2kX-oB-4oX" id="R4l-dq-yfm"/>
+                        <outlet property="expenseAmount" destination="qt9-g5-vq3" id="23T-BR-wQp"/>
+                        <outlet property="expenseName" destination="Kww-tL-cAv" id="M5x-UR-ZLh"/>
+                        <outlet property="saveButton" destination="2kX-oB-4oX" id="9Sf-V4-FOC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSL-M3-nrX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1535" y="157"/>
+            <point key="canvasLocation" x="-1580" y="165"/>
         </scene>
     </scenes>
 </document>

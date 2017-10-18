@@ -8,34 +8,39 @@
 
 import UIKit
 
-class BudgetListViewController: UITableViewController {
+class BudgetListViewController: UITableViewController, BudgetDelegate {
     
     var budgets = [Budget]()
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-         self.navigationItem.leftBarButtonItem = editButtonItem
+        
+        navigationItem.leftBarButtonItem = editButtonItem
     }
-
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(title: "Back", style:.plain, target:nil, action:nil)
     }
-
+    
     //MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let destinationViewController = segue.destination as? AddBudgetViewController {
-            //
+            destinationViewController.delegate = self
         }
     }
     
     //MARK: - Callback
     
-
-    //MARK: - UITableViewDataSource
+    func enteredBudgetData(name: String, amount: Int) {
+        let budget = Budget(id: budgets.count, name: name, total: amount, expenses: [])
+        budgets.append(budget)
+        tableView.reloadData()
+    }
+    
+    // MARK: - Table view data source
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return budgets.count
@@ -59,7 +64,7 @@ class BudgetListViewController: UITableViewController {
         
         let budget = self.budgets[indexPath.row]
         let viewController = UIStoryboard(name:"BudgetDetail", bundle: nil).instantiateViewController(withIdentifier: "BudgetDetailsScene") as! BudgetDetailsViewController
-        //viewController.delegate = self
+        viewController.delegate = self
         viewController.budget = budget
         
         navigationController?.pushViewController(viewController, animated: true)
@@ -69,7 +74,6 @@ class BudgetListViewController: UITableViewController {
         return true
     }
     
-    // Override to support editing the table view.
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
             // Delete the row from the data source
@@ -81,7 +85,19 @@ class BudgetListViewController: UITableViewController {
     }
 }
 
+// MARK: - Calculate index for budget
 
+extension BudgetListViewController: BudgetDetailsViewDelegate {
+    func budgetDetailsViewDidUpdateBudget(budget: Budget) {
+        for (index, existingBudget) in budgets.enumerated() {
+            if existingBudget.id == budget.id {
+                budgets[index] = budget
+                break
+            }
+        }
+        tableView.reloadData()
+    }
+}
 // MARK: - Subtitle on UINavigationBar
 
 extension UINavigationItem {

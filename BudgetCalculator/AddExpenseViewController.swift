@@ -12,7 +12,7 @@ protocol ExpenseDelegate: class {
     func enteredExpenseData(name: String, amount: Int)
 }
 
-class AddExpensesViewController: UIViewController, UITextFieldDelegate {
+class AddExpenseViewController: UIViewController, UITextFieldDelegate {
     
     weak var delegate: ExpenseDelegate? = nil
     
