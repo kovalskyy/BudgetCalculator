@@ -35,10 +35,10 @@
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2kX-oB-4oX">
-                                <rect key="frame" x="16" y="603" width="343" height="44"/>
+                                <rect key="frame" x="16" y="262" width="343" height="50"/>
                                 <color key="backgroundColor" red="0.84313725490000002" green="0.22352941179999999" blue="0.25490196079999999" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="44" id="glF-Hz-MgH"/>
+                                    <constraint firstAttribute="height" constant="50" id="glF-Hz-MgH"/>
                                 </constraints>
                                 <state key="normal" title="SAVE">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -50,6 +50,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="2kX-oB-4oX" firstAttribute="top" secondItem="qt9-g5-vq3" secondAttribute="bottom" constant="75" id="40W-Bl-S2l"/>
                             <constraint firstItem="Kww-tL-cAv" firstAttribute="trailing" secondItem="PTV-gf-jhI" secondAttribute="trailingMargin" id="Cco-u5-KGm"/>
                             <constraint firstItem="qt9-g5-vq3" firstAttribute="leading" secondItem="Kww-tL-cAv" secondAttribute="leading" id="Ipn-Nw-A09"/>
                             <constraint firstItem="qt9-g5-vq3" firstAttribute="trailing" secondItem="Kww-tL-cAv" secondAttribute="trailing" id="LCc-94-4TV"/>
@@ -58,7 +59,6 @@
                             <constraint firstItem="qt9-g5-vq3" firstAttribute="top" secondItem="Kww-tL-cAv" secondAttribute="bottom" constant="36" id="VEM-wD-kcQ"/>
                             <constraint firstItem="2kX-oB-4oX" firstAttribute="trailing" secondItem="qt9-g5-vq3" secondAttribute="trailing" id="Wei-n8-Ewk"/>
                             <constraint firstItem="Kww-tL-cAv" firstAttribute="top" secondItem="h9s-BS-i8D" secondAttribute="bottom" constant="71" id="g5T-sz-2nm"/>
-                            <constraint firstAttribute="bottom" secondItem="2kX-oB-4oX" secondAttribute="bottom" constant="20" symbolic="YES" id="yn1-bd-TzZ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add an expense" id="m4A-FN-Jdg"/>
