@@ -42,8 +42,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="amountLabel" destination="ZC2-ch-Muf" id="5P2-kF-BO5"/>
-                                    <outlet property="nameLabel" destination="JBR-jd-tBu" id="RwT-io-Dvh"/>
+                                    <outlet property="amountLabel" destination="ZC2-ch-Muf" id="VHn-4b-HxT"/>
+                                    <outlet property="nameLabel" destination="JBR-jd-tBu" id="ZEG-Sy-K1v"/>
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="BalanceCell" textLabel="09b-wi-U8U" style="IBUITableViewCellStyleDefault" id="M9I-gw-69J" customClass="BalanceCell" customModule="BudgetCalculator" customModuleProvider="target">

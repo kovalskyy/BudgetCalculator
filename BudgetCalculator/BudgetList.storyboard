@@ -12,13 +12,13 @@
         <!--BUDGET-->
         <scene sceneID="plR-3I-dbS">
             <objects>
-                <tableViewController storyboardIdentifier="BudgetListScene" id="0J7-xB-3lO" customClass="BudgetListViewController" customModule="BudgetList" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController storyboardIdentifier="BudgetListScene" id="0J7-xB-3lO" customClass="BudgetListViewController" customModule="BudgetCalculator" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="fF3-4v-3Qt">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BudgetListCell" textLabel="c0S-SQ-dlm" detailTextLabel="4bc-7S-ywB" style="IBUITableViewCellStyleSubtitle" id="lmI-U0-Smv" customClass="BudgetCell" customModule="BudgetList" customModuleProvider="target">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="BudgetListCell" textLabel="c0S-SQ-dlm" detailTextLabel="4bc-7S-ywB" style="IBUITableViewCellStyleSubtitle" id="lmI-U0-Smv" customClass="BudgetCell" customModule="BudgetCalculator" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lmI-U0-Smv" id="XSS-zw-xPT">
@@ -42,8 +42,8 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <outlet property="nameLabel" destination="c0S-SQ-dlm" id="lSp-KR-aYK"/>
-                                    <outlet property="totalLabel" destination="4bc-7S-ywB" id="94c-oy-itf"/>
+                                    <outlet property="nameLabel" destination="c0S-SQ-dlm" id="Nrz-eM-6dj"/>
+                                    <outlet property="totalLabel" destination="4bc-7S-ywB" id="4OL-I1-Nr8"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

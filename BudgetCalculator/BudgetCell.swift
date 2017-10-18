@@ -10,15 +10,15 @@ import UIKit
 
 class BudgetCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    
+    var budget: Budget? {
+        didSet {
+            nameLabel.text = budget?.name.capitalized
+            totalLabel.text = budget?.budgetDisplayText
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
+    
 }

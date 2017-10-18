@@ -10,15 +10,16 @@ import UIKit
 
 class ExpenseCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var amountLabel: UILabel!
+    
+    var expense: Expense? {
+        didSet {
+            nameLabel.text = expense?.name
+            if let amount = expense?.amount {
+                amountLabel.text = amount.formatedCurrency
+            }
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-
+    
 }
